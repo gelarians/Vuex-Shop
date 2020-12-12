@@ -25,7 +25,13 @@ const actions = {
 }
 
 const getters = {
-    getProductItems: state => state.productItems
+    getProductItems: state => state.productItems,
+    productItemById: state => id => {
+        console.log("ID: ", id)
+        const item = state.productItems.find(item => item.id === id)
+        console.log("ITEM:", item) 
+        return state.productItems.find(item => item.id === id)
+    }
     
 }
 

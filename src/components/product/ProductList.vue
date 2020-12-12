@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h3 class="text-uppercase">Shop</h3>
 
     <div class="row">

@@ -20,6 +20,10 @@ import Navbar from "./components/Navbar.vue"
     components:{
       Navbar,
     },
+    created() {
+    this.$store.dispatch("getProductItems");
+    this.$store.dispatch("getCartItems");
+  }
 
   }
 </script>

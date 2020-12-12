@@ -4,13 +4,31 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import ProductList from "./components/product/ProductList.vue"
+import CartList from "./components/card/CardList.vue"
+import ProductItem from "./components/product/ProductItem.vue"
+import NotFound from "./components/error/NotFound.vue"
 
 const routes = [
     // Jede route hat ein objekt innerhalb der liste
     {
         path: '/',
         component: ProductList
+    },
+    {
+        path: '/cart',
+        component: CartList
+    },
+    {
+        path: '/products/:id',
+        component: ProductItem,
+        props: true
+    },
+    {
+        path: '*',
+        component: NotFound
     }
+
+
 ]
 
 export const router = new VueRouter({

@@ -20,25 +20,25 @@ const actions = {
         })
     },
     addCartItem({commit}, payload){
-        axios.post("api/cart", payload)
+        return axios.post("/api/cart", payload)
             .then((response) => {
                 commit("UPDATE_CART_ITEM", response.data)
             })
     },
     removeCartItem({commit}, payload){
-        axios.post("api/cart/delete", payload)
+        axios.post("/api/cart/delete", payload)
             .then((response) => {
                 commit("UPDATE_CART_ITEM", response.data)
             })
     },
     removeAllCartItems({commit}){
-        axios.post("api/cart/delete/all")
+        axios.post("/api/cart/delete/all")
             .then((response) => {
                 commit("UPDATE_CART_ITEM", response.data)
             })
     },
     removeCartContainer({commit}, payload){
-        axios.post("api/cart/product/delete", payload)
+        axios.post("/api/cart/product/delete", payload)
             .then((response) => {
                 commit("UPDATE_CART_ITEM", response.data)
             })
