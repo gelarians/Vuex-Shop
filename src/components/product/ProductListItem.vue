@@ -35,12 +35,12 @@
     <div class="card-body">
       <h6 class="card-title">{{ item.title }}</h6>
       <p class="card-subtitle text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        {{ item.description}}
       </p>
       <div class="text-center mt-3">
         <div class="lead">
-          <strong class="color-vue">€ 20.99</strong>
-          <span class="ml-4 color-vue2"><del>€29.99 </del></span>
+          <strong class="color-vue">€ {{ item.price }}</strong>
+          <span class="ml-4 color-vue2"><del>€{{item.origPrice}} </del></span>
         </div>
       </div>
     </div>

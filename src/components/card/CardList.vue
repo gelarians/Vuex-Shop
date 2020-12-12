@@ -73,9 +73,6 @@ export default {
   components: {
     CartListItem,
   },
-  created() {
-    this.$store.dispatch("getCartItems");
-  },
   computed: {
     ...mapGetters(["cartItems", "cartTotal", "cartQuantity"]),
     /*

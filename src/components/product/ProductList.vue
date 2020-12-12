@@ -24,9 +24,6 @@ export default {
   components: {
       ProductListItem
   },
-  created () {
-      this.$store.dispatch("getProductItems")
-  },
   computed: {
       productItems (){
           return this.$store.getters.getProductItems

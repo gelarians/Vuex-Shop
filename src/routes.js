@@ -3,13 +3,21 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+import Signin from "./components/auth/Signin.vue"
+
 import ProductList from "./components/product/ProductList.vue"
 import CartList from "./components/card/CardList.vue"
 import ProductItem from "./components/product/ProductItem.vue"
+
 import NotFound from "./components/error/NotFound.vue"
+
 
 const routes = [
     // Jede route hat ein objekt innerhalb der liste
+    {
+        path: "/login",
+        component: Signin
+    },
     {
         path: '/',
         component: ProductList
