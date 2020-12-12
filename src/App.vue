@@ -1,26 +1,24 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4 p-5">
-        <CartList />
-      </div>
-
-      <div class="col-8 p-5">
-        <ProductList />
+      <div class="col-12">
+        <Navbar />
+        <router-view></router-view>
       </div>
     </div>
+    
+    
   </div>
 </template>
 
 <script>
-import CartList from "./components/card/CardList.vue"
-import ProductList from "./components/product/ProductList.vue"
+
+import Navbar from "./components/Navbar.vue"
 
   export default {
     name: 'App',
     components:{
-      CartList,
-      ProductList
+      Navbar,
     },
 
   }
